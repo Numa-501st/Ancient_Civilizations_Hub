@@ -1,0 +1,12 @@
+{% extends "ancient_civilizations_hub/base.html" %}
+
+{% block content %}
+  <p>Add a new civilization:</p>
+
+<form action="{% url 'ancient_civilizations_hub:new_civilization' %}" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button name="submit">Add civilization</button>
+    </form>
+
+{% endblock content %}

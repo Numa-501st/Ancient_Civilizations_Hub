@@ -1,0 +1,20 @@
+{% extends "ancient_civilizations_hub/base.html" %}
+
+{% block page_header %}
+    <h1>Civilizations</h1>
+{% endblock page_header %}
+
+{% block content %}
+    <ul>
+        {% for civilization in civilizations %}
+            <li><h3>
+              <a href="{% url 'ancient_civilizations_hub:civilization' civilization.id %}"> {{ civilization }}</a>
+            </h3></li>
+        {% empty %}
+            <li><h3>No Civilizations have been added yet.</h3></li>
+        {% endfor %}
+    </ul>
+    
+
+    <h3><a href ="{% url 'ancient_civilizations_hub:new_civilization' %}">Add a new civilization</a></h3>
+{% endblock content %}

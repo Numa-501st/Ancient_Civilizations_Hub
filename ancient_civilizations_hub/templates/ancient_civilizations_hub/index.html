@@ -1,0 +1,17 @@
+{% extends "ancient_civilizations_hub/base.html" %}
+
+{% block page_header %}
+    <div class="jumbotron">
+        <h1 class="display-3">View Your Ancient Civilizations.</h1>
+
+        <p class="lead">Make a learning hub for Ancient Civilizations, and keep a list
+            of the civilizations you have gained knowledge on. Whenever you learn 
+            something new about a civilization, make an entry summarizing what you have
+            learned.</p>
+
+
+        <a class="btn btn-lg btn-primary" href="{% url 'users:register' %}"
+            role="button">Register &raquo;</a>
+
+    </div>
+{% endblock page_header %}
